@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div th:replace="~{componentes :: head}"></div>
+
+<body>
+<div th:replace="~{componentes :: cabecalho}"></div>
+<div class="card">
+    <div th:each="filme : ${filmes}">
+
+            <div class="card-body">
+                <div class="card" >
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img th:src="${filme.urlPoster}" class="img-fluid rounded-start">
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <span th:text="${filme.nome}">titulo</span>
+                                </h5>
+                                <p class="card-text">
+                                    <span th:text="${filme.descricao}">descricao</span>
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-body-secondary">
+                                        <span th:text="${filme.nota}">nota</span>
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    </div>
+</body>
+</html>
