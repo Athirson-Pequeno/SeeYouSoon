@@ -3,8 +3,6 @@ package com.example.seeYouSoon.model;
 import javax.json.JsonObject;
 
 public class Filme {
-
-
     private String nome;
     private String urlPoster;
     private String descricao;
